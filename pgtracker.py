@@ -8,7 +8,7 @@ from dash.dependencies import Input, Output, State
 
 
 pg = pd.read_csv('pg.csv', engine='python')
-spell_list = pd.read_csv('spell_list.csv', engine='python')
+spell_list = pd.read_csv('Spells.csv', engine='python')
 
 
 
@@ -99,7 +99,7 @@ def load_spell_list(sel_pg):
     archetipo = pg.loc[(pg.nome == sel_pg), 'archetipo']
     #FARE UN MERGING DI PIù DATABESE PER CAPIRE QUALI SPELL APPARTENGONO AD UN ARCHETIPO O AD UNA CLASSE
     #O IMPOSTARE VARIABILI DICOTOMICHE
-    spells =
+    spells_c = spell_list[(classe in spell_list.Classes), :]
 
 
 
